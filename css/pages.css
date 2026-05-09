@@ -1,0 +1,119 @@
+/* ============================================================
+   pages.css — Page-specific styling.
+   Each page block is namespaced under .page-<id> to avoid leakage.
+   ============================================================ */
+
+/* ============================================================
+   Shared page layout primitives
+   ============================================================ */
+.page {
+  display: grid;
+  gap: var(--sp-5);
+  grid-auto-rows: min-content;
+}
+
+.page-grid-2 { display: grid; grid-template-columns: 2fr 1fr; gap: var(--sp-5); }
+.page-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-5); }
+.page-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-4); }
+
+@media (max-width: 1180px) {
+  .page-grid-2 { grid-template-columns: 1fr; }
+  .page-grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .page-grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+  .page-grid-2, .page-grid-3, .page-grid-4 { grid-template-columns: 1fr; }
+}
+
+.chart-frame {
+  position: relative;
+  width: 100%;
+  background: var(--bg-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--r-md);
+  padding: var(--sp-3);
+}
+.chart-frame canvas { width: 100% !important; }
+.chart-frame[data-h="sm"]  { height: 160px; }
+.chart-frame[data-h="md"]  { height: 240px; }
+.chart-frame[data-h="lg"]  { height: 320px; }
+.chart-frame[data-h="xl"]  { height: 420px; }
+
+/* Filter rail (used by emissions, alerts, vessels) */
+.filter-rail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--bg-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--r-md);
+}
+.filter-rail-group { display: inline-flex; gap: var(--sp-2); align-items: center; }
+.filter-rail-group::after {
+  content: "";
+  width: 1px; height: 18px;
+  background: var(--border-subtle);
+  margin: 0 var(--sp-1);
+}
+.filter-rail-group:last-child::after { display: none; }
+.filter-rail-label {
+  font-size: var(--fs-2xs);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-tertiary);
+  margin-right: var(--sp-1);
+}
+
+/* Searchbox */
+.search-box {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 10px;
+  background: var(--bg-3);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--r-md);
+  font-size: var(--fs-sm);
+  transition: border-color var(--dur-fast);
+}
+.search-box:focus-within { border-color: var(--brand-primary); background: var(--bg-2); }
+.search-box svg { width: 14px; height: 14px; color: var(--text-tertiary); }
+.search-box input {
+  background: transparent; border: none; outline: none;
+  color: var(--text-primary);
+  font-size: var(--fs-sm);
+  width: 220px;
+  font-family: inherit;
+}
+.search-box input::placeholder { color: var(--text-muted); }
+
+/* Date range chips */
+.range-chip {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+}
+
+/* ============================================================
+   page-vessels — populated by Agent 1
+   ============================================================ */
+/* (Agent will append styles here) */
+
+/* ============================================================
+   page-emissions — populated by Agent 2
+   ============================================================ */
+/* (Agent will append styles here) */
+
+/* ============================================================
+   page-shore — populated by Agent 3
+   ============================================================ */
+/* (Agent will append styles here) */
+
+/* ============================================================
+   page-alerts — populated by Agent 4
+   ============================================================ */
+/* (Agent will append styles here) */
+
+/* ============================================================
+   page-reports — populated by Agent 5
+   ============================================================ */
+/* (Agent will append styles here) */

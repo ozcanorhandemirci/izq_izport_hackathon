@@ -1,0 +1,196 @@
+/* ============================================================
+   layout.css — App shell grid, sidebar, topbar, page mount
+   ============================================================ */
+
+.app-shell {
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  grid-template-rows: var(--topbar-h) 1fr;
+  grid-template-areas:
+    "sidebar topbar"
+    "sidebar main";
+  height: 100vh;
+  width: 100vw;
+}
+
+.app-sidebar {
+  grid-area: sidebar;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: background var(--dur-base) var(--ease-out), border-color var(--dur-base);
+}
+
+.app-topbar {
+  grid-area: topbar;
+  background: var(--bg-1);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--sp-6);
+  gap: var(--sp-5);
+  z-index: 10;
+  transition: background var(--dur-base) var(--ease-out), border-color var(--dur-base);
+}
+
+.app-main {
+  grid-area: main;
+  background: var(--bg-0);
+  padding: var(--sp-5) var(--sp-6) var(--sp-6);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-4) transparent;
+  transition: background var(--dur-base) var(--ease-out);
+}
+.app-main::-webkit-scrollbar { width: 8px; }
+.app-main::-webkit-scrollbar-thumb { background: var(--bg-4); border-radius: 999px; }
+
+/* Page mount — every route renders into here */
+.page-root {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: min-content;
+  gap: var(--sp-5);
+  animation: page-fade-in var(--dur-slow) var(--ease-out);
+}
+@keyframes page-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Bento (used by dashboard) ---------- */
+.bento { display: grid; gap: var(--sp-5); }
+.bento--kpis  { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 168px; }
+.bento--ops   { grid-template-columns: 1fr; }
+.bento--shore { grid-template-columns: 1fr; }
+
+.bento-cell {
+  background: var(--bento-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--r-lg);
+  padding: var(--sp-5);
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--dur-base) var(--ease-out), background var(--dur-base);
+}
+.bento-cell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--bento-overlay);
+  pointer-events: none;
+}
+.bento-cell:hover { border-color: var(--border-soft); }
+
+:root[data-theme="light"] .bento-cell { box-shadow: var(--shadow-1); }
+:root[data-theme="light"] .bento-cell:hover { box-shadow: var(--shadow-2); }
+
+/* ---------- Generic page panels (shared by all routes) ---------- */
+.panel {
+  background: var(--bento-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--r-lg);
+  padding: var(--sp-5);
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--dur-base) var(--ease-out), background var(--dur-base);
+}
+.panel::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: var(--bento-overlay);
+  pointer-events: none;
+}
+.panel > * { position: relative; }
+:root[data-theme="light"] .panel { box-shadow: var(--shadow-1); }
+
+.panel-head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--sp-4);
+}
+.panel-title {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  display: flex; align-items: center; gap: var(--sp-2);
+}
+.panel-title small {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-regular);
+  color: var(--text-tertiary);
+  letter-spacing: normal;
+}
+.panel-actions {
+  display: flex; gap: var(--sp-2);
+  font-size: var(--fs-xs);
+  flex-wrap: wrap;
+}
+
+/* ---------- Page header (every page has one) ---------- */
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.page-header-title h1 {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+  letter-spacing: -0.015em;
+  margin-bottom: 2px;
+}
+.page-header-title p {
+  font-size: var(--fs-sm);
+  color: var(--text-tertiary);
+}
+.page-header-actions {
+  display: flex; gap: var(--sp-2);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1280px) {
+  .bento--kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 960px) {
+  .app-shell { grid-template-columns: 64px 1fr; }
+  :root { --sidebar-w: 64px; }
+  .app-sidebar .nav-label,
+  .app-sidebar .sidebar-brand-meta,
+  .app-sidebar .sidebar-footer-meta,
+  .app-sidebar .sidebar-attribution { display: none; }
+}
+@media (max-width: 720px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--topbar-h) auto 1fr;
+    grid-template-areas:
+      "topbar"
+      "sidebar"
+      "main";
+  }
+  .app-sidebar { flex-direction: row; height: auto; border-right: none; border-bottom: 1px solid var(--border-subtle); }
+  .bento--kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 152px; }
+  .app-main { padding: var(--sp-4); }
+  .page-header h1 { font-size: var(--fs-xl); }
+}
+
+/* Copilot mount */
+.copilot-mount {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+}
+.copilot-mount > * { pointer-events: auto; }

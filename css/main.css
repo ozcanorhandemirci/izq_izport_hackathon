@@ -1,0 +1,211 @@
+/* ============================================================
+   main.css — design tokens, reset, typography, base elements
+   Theme tokens are scoped via [data-theme=…] on <html>.
+   ============================================================ */
+
+:root {
+  --izmir-primary:  #009DC4;
+  --izmir-deep:     #006B8C;
+  --izmir-bright:   #4FC3DD;
+  --izmir-aegean:   #00B8DB;
+  --izmir-sand:     #E5C28A;
+
+  --brand-primary:        var(--izmir-primary);
+  --brand-primary-deep:   var(--izmir-deep);
+  --brand-primary-bright: var(--izmir-bright);
+
+  --status-success:  #1D9E75;
+  --status-warning:  #BA7517;
+  --status-critical: #E24B4A;
+  --status-info:     var(--izmir-primary);
+
+  --font-sans: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --fs-2xs: 10px;
+  --fs-xs:  11px;
+  --fs-sm:  12px;
+  --fs-md:  13px;
+  --fs-base:14px;
+  --fs-lg:  16px;
+  --fs-xl:  20px;
+  --fs-2xl: 26px;
+  --fs-3xl: 34px;
+  --fs-4xl: 48px;
+
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px; --sp-5: 20px;
+  --sp-6: 24px; --sp-7: 32px; --sp-8: 40px; --sp-9: 56px;
+
+  --r-sm: 6px; --r-md: 10px; --r-lg: 14px; --r-xl: 20px; --r-pill: 999px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 120ms; --dur-base: 220ms; --dur-slow: 420ms;
+
+  --sidebar-w: 232px;
+  --topbar-h:  60px;
+}
+
+:root,
+:root[data-theme="dark"] {
+  --bg-0:    #0A0F14;
+  --bg-1:    #0F151C;
+  --bg-2:    #131C25;
+  --bg-3:    #1A2430;
+  --bg-4:    #22303F;
+  --bg-elev: #1E2A37;
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-soft:   rgba(255, 255, 255, 0.10);
+  --border-strong: rgba(255, 255, 255, 0.18);
+
+  --text-primary:   #E8EEF4;
+  --text-secondary: #A6B4C2;
+  --text-tertiary:  #6B7B8C;
+  --text-muted:     #4A5868;
+
+  --status-success-soft:  rgba(29, 158, 117, 0.14);
+  --status-warning-soft:  rgba(186, 117, 23, 0.14);
+  --status-critical-soft: rgba(226, 75, 74, 0.14);
+  --status-info-soft:     rgba(0, 157, 196, 0.16);
+  --brand-primary-soft:   rgba(0, 157, 196, 0.16);
+
+  --status-success-glow:  0 0 16px rgba(29, 158, 117, 0.45);
+  --status-warning-glow:  0 0 16px rgba(186, 117, 23, 0.45);
+  --status-critical-glow: 0 0 16px rgba(226, 75, 74, 0.45);
+  --status-info-glow:     0 0 16px rgba(0, 157, 196, 0.50);
+  --brand-glow:           0 0 18px rgba(0, 157, 196, 0.45);
+
+  --grad-info:    linear-gradient(180deg, rgba(0, 157, 196, 0.32), rgba(0, 157, 196, 0));
+  --grad-success: linear-gradient(180deg, rgba(29, 158, 117, 0.32), rgba(29, 158, 117, 0));
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.30);
+  --shadow-2: 0 6px 18px rgba(0, 0, 0, 0.35);
+  --shadow-3: 0 18px 40px rgba(0, 0, 0, 0.45);
+
+  --app-backdrop:
+    radial-gradient(ellipse 80% 50% at 0% 0%, rgba(0, 157, 196, 0.10), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(29, 158, 117, 0.06), transparent 70%),
+    var(--bg-0);
+
+  --sidebar-bg: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-0) 100%);
+  --bento-bg:   linear-gradient(180deg, var(--bg-2) 0%, var(--bg-1) 100%);
+  --bento-overlay: radial-gradient(ellipse 120% 60% at 50% 0%, rgba(255, 255, 255, 0.025), transparent 60%);
+  --modal-overlay-bg: rgba(2, 6, 12, 0.65);
+}
+
+:root[data-theme="light"] {
+  --bg-0:    #F1F5F9;
+  --bg-1:    #FFFFFF;
+  --bg-2:    #FBFCFE;
+  --bg-3:    #EEF3F8;
+  --bg-4:    #DDE5EC;
+  --bg-elev: #FFFFFF;
+
+  --border-subtle: rgba(15, 27, 38, 0.06);
+  --border-soft:   rgba(15, 27, 38, 0.10);
+  --border-strong: rgba(15, 27, 38, 0.18);
+
+  --text-primary:   #0F1B26;
+  --text-secondary: #44546A;
+  --text-tertiary:  #6B7B8C;
+  --text-muted:     #95A2B0;
+
+  --status-success:  #0E7C5C;
+  --status-warning:  #985E0F;
+  --status-critical: #C03534;
+  --status-info:     #0089B5;
+
+  --brand-primary:        #0089B5;
+  --brand-primary-deep:   #005E80;
+  --brand-primary-bright: #1AAFD4;
+
+  --status-success-soft:  rgba(14, 124, 92, 0.10);
+  --status-warning-soft:  rgba(152, 94, 15, 0.10);
+  --status-critical-soft: rgba(192, 53, 52, 0.10);
+  --status-info-soft:     rgba(0, 137, 181, 0.10);
+  --brand-primary-soft:   rgba(0, 137, 181, 0.10);
+
+  --status-success-glow:  0 0 0 3px rgba(14, 124, 92, 0.16);
+  --status-warning-glow:  0 0 0 3px rgba(152, 94, 15, 0.16);
+  --status-critical-glow: 0 0 0 3px rgba(192, 53, 52, 0.16);
+  --status-info-glow:     0 0 0 3px rgba(0, 137, 181, 0.16);
+  --brand-glow:           0 6px 16px rgba(0, 137, 181, 0.20);
+
+  --grad-info:    linear-gradient(180deg, rgba(0, 137, 181, 0.25), rgba(0, 137, 181, 0));
+  --grad-success: linear-gradient(180deg, rgba(14, 124, 92, 0.25), rgba(14, 124, 92, 0));
+
+  --shadow-1: 0 1px 2px rgba(15, 27, 38, 0.06);
+  --shadow-2: 0 6px 18px rgba(15, 27, 38, 0.08);
+  --shadow-3: 0 18px 40px rgba(15, 27, 38, 0.12);
+
+  --app-backdrop:
+    radial-gradient(ellipse 80% 50% at 0% 0%, rgba(0, 137, 181, 0.08), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(14, 124, 92, 0.06), transparent 70%),
+    var(--bg-0);
+
+  --sidebar-bg: linear-gradient(180deg, #FFFFFF 0%, #F7FAFC 100%);
+  --bento-bg:   linear-gradient(180deg, #FFFFFF 0%, #FBFCFE 100%);
+  --bento-overlay: radial-gradient(ellipse 120% 60% at 50% 0%, rgba(0, 137, 181, 0.025), transparent 60%);
+  --modal-overlay-bg: rgba(15, 27, 38, 0.45);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+*::before, *::after { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  background: var(--bg-0);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--app-backdrop);
+  overflow: hidden;
+  transition: background-color var(--dur-base) var(--ease-out), color var(--dur-base);
+}
+
+img, svg, canvas { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+button:focus-visible, a:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+  border-radius: var(--r-sm);
+}
+input, select, textarea { font: inherit; color: inherit; }
+
+.mono { font-family: var(--font-mono); font-feature-settings: "tnum" 1; }
+.tnum { font-variant-numeric: tabular-nums; }
+.uppercase { text-transform: uppercase; letter-spacing: 0.08em; }
+
+.scroll-styled {
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-4) transparent;
+}
+.scroll-styled::-webkit-scrollbar { width: 8px; height: 8px; }
+.scroll-styled::-webkit-scrollbar-track { background: transparent; }
+.scroll-styled::-webkit-scrollbar-thumb { background: var(--bg-4); border-radius: 999px; }
+.scroll-styled::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+.noscript-banner {
+  position: fixed; inset: 0;
+  display: grid; place-items: center;
+  background: var(--bg-1); color: var(--text-primary);
+  padding: var(--sp-6); text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
