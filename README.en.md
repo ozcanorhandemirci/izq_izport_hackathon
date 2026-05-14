@@ -1,10 +1,10 @@
 <div align="center">
 
-[🇹🇷 Türkçe](./README.md) · **🇬🇧 English**
+[TR](./README.md) · **EN**
 
 # 🌊 İZPORT
 
-### Port Operations Intelligence — Concept Demo
+### Port Operations Intelligence: Concept Demo
 
 ![Status](https://img.shields.io/badge/Status-Concept_Demo-orange?style=flat-square)
 ![License](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey?style=flat-square)
@@ -25,13 +25,13 @@
 
 ## ⚠️ Important Disclaimer
 
-This work is a concept demonstration developed in **12 hours** on **9 May 2026** as part of the **"Hackability — Sustainability, AI, and Coding"** competition organized by the **İzQ Entrepreneurship Center**.
+This work is a concept demonstration developed in **12 hours** on **9 May 2026** as part of the **"Hackability: Sustainability, AI, and Coding"** competition organized by the **İzQ Entrepreneurship Center**.
 
 **This is not a real application.**
 
 - This project has **no official affiliation, endorsement, or sponsorship** from **İzmir Metropolitan Municipality**, **İZPORT Port Operations**, **İzmir Development Agency**, or any of the companies referenced (Petkim, Tüpraş, SOCAR, TCDD, Petrol Ofisi, Total, Alpet, Ege Gaz, Milangaz, Habaş, Ege Gübre, Ege Çelik, IDÇ, ETKİ, Batıliman, Nemport, Ulusoy) or global shipping lines (MSC, Maersk, Evergreen, CMA, COSCO, ONE, HMM, NYK).
 
-- Some sectoral data is **inspired by publicly available publications from the İzmir Development Agency (İZKA)**; all vessel names, real-time emission values, terminal capacities, operator profiles, and alert scenarios are **entirely fictional and illustrative** — they do not reflect the actual operational performance of these organizations.
+- Some sectoral data is **inspired by publicly available publications from the İzmir Development Agency (İZKA)**; all vessel names, real-time emission values, terminal capacities, operator profiles, and alert scenarios are **entirely fictional and illustrative**; they do not reflect the actual operational performance of these organizations.
 
 - All trademarks, company names, and institutional references appear solely for **concept demonstration purposes**; all rights belong to their respective owners.
 
@@ -81,22 +81,22 @@ In a real implementation:
 - The software could be rewritten in a different language, framework, or architecture
 - Feature scope and UX decisions could be entirely different based on requirements
 
-The purpose of this repository is not to provide a finished product, production infrastructure, or implementation recommendation — but to **make the UI/UX of the concept tangible**. All decisions were first-pass approaches made within a 12-hour competition.
+The purpose of this repository is not to provide a finished product, production infrastructure, or implementation recommendation, but to **make the UI/UX of the concept tangible**. All decisions were first-pass approaches made within a 12-hour competition.
 
 ---
 
 ## ✨ Highlights
 
-- **Realistic port operations panel** — 21 ports, 12 vessels, 4 operator profiles, shore-power grid, rule engine
-- **Simulation engine** — 3.5-second tick loop; emissions, weather, and vessel status update live
-- **Rule-based alert engine** — 5 rule families (aggregate exceedance, dispersion risk, ETA conflict, etc.), each alert carries actionable recommendations
-- **Hash-chained audit log** — FNV-1a hash for tampering detection, read-only activity log
-- **AI Operations Copilot** — context-aware deterministic reply engine (live-data assistant impression without a real LLM)
-- **Turkish-character PDF report generation** — jsPDF + DejaVu Sans embed, 6 templates
-- **Bilingual UI** — 600+ i18n keys, full TR/EN parity, locale-aware numbers and dates
-- **Light and dark theme** — atomic switching, FOUC-preventing early bootstrap
-- **localStorage persistence** — manual entries, preferences, audit log survive across sessions
-- **Responsive design** — desktop-first, mobile-presentable (4 breakpoints: 1280 / 1180 / 720 / 480 px)
+- **Realistic port operations panel**: 21 ports, 12 vessels, 4 operator profiles, shore-power grid, rule engine
+- **Simulation engine**: 3.5-second tick loop; emissions, weather, and vessel status update live
+- **Rule-based alert engine**: 5 rule families (aggregate exceedance, dispersion risk, ETA conflict, etc.), each alert carries actionable recommendations
+- **Hash-chained audit log**: FNV-1a hash for tampering detection, read-only activity log
+- **AI Operations Copilot**: context-aware deterministic reply engine (live-data assistant impression without a real LLM)
+- **Turkish-character PDF report generation**: jsPDF + DejaVu Sans embed, 6 templates
+- **Bilingual UI**: 600+ i18n keys, full TR/EN parity, locale-aware numbers and dates
+- **Light and dark theme**: atomic switching, FOUC-preventing early bootstrap
+- **localStorage persistence**: manual entries, preferences, audit log survive across sessions
+- **Responsive design**: desktop-first, mobile-presentable (4 breakpoints: 1280 / 1180 / 720 / 480 px)
 
 ---
 
@@ -258,8 +258,8 @@ Enterprise-grade PDF report builder.
 
 **Sections:**
 
-- Left panel — Builder: 6 templates (Executive Summary, Compliance Audit, Operations Briefing, Shore-Power ROI, Alert Summary, Custom), date range, 10-section toggles, pollutant filter, severity filter, cover fields
-- Right panel — Live preview: A4 page simulation, cover + KPI grid + vessel mini-table + Chart.js sparklines + recent alerts + compliance table
+- Left panel · Builder: 6 templates (Executive Summary, Compliance Audit, Operations Briefing, Shore-Power ROI, Alert Summary, Custom), date range, 10-section toggles, pollutant filter, severity filter, cover fields
+- Right panel · Live preview: A4 page simulation, cover + KPI grid + vessel mini-table + Chart.js sparklines + recent alerts + compliance table
 - PDF generation: DejaVu Sans Turkish-character support, programmatic primitives (cover, heading, table, kpiGrid), html2canvas snapshots, page-break management
 - CSV export
 - Recent reports list (metadata in localStorage)
@@ -367,7 +367,7 @@ Some sectoral data (port count, terminal categories, etc.) is inspired by public
 
 | | |
 |---|---|
-| **Competition** | Hackability — Sustainability, AI, and Coding |
+| **Competition** | Hackability: Sustainability, AI, and Coding |
 | **Date** | 9 May 2026 |
 | **Duration** | 12 hours |
 | **Organizer** | İzQ Entrepreneurship Center |
@@ -381,11 +381,11 @@ This project is licensed under the **[Creative Commons Attribution-NonCommercial
 
 **Summary:**
 
-- ✅ **You may view** — read the source code
-- ✅ **You may clone and run locally** — for personal / educational evaluation
+- ✅ **You may view**: read the source code
+- ✅ **You may clone and run locally**: for personal / educational evaluation
 - ✅ **You may share the unmodified work with attribution**
-- ❌ **No commercial use** — selling, monetization, customer demos, commercial product integration
-- ❌ **No modifications or derivative works** — code fragments may not be used in other projects
+- ❌ **No commercial use**: selling, monetization, customer demos, commercial product integration
+- ❌ **No modifications or derivative works**: code fragments may not be used in other projects
 - ❌ **Attribution and disclaimer must not be removed**
 
 For the full license text, see **[LICENSE](./LICENSE)**.
@@ -402,11 +402,11 @@ All trademarks, company names, institutions, and vessel names referenced in this
 
 ## 🙏 Acknowledgments
 
-- **[İzQ Entrepreneurship Center](https://izqgirisimcilik.com/)** — for organizing the Hackability 2026 competition
-- **[İzmir Development Agency (İZKA)](https://www.izka.org.tr/)** — for the inspiring publicly available sector publications
-- **[Chart.js](https://www.chartjs.org/)** — all charts and sparklines
-- **[jsPDF](https://github.com/parallax/jsPDF)** + **[html2canvas](https://html2canvas.hertzen.com/)** — PDF generation infrastructure
-- **[DejaVu Sans](https://dejavu-fonts.github.io/)** — font with Turkish character support
+- **[İzQ Entrepreneurship Center](https://izq.com.tr/)**: for organizing the Hackability 2026 competition
+- **[İzmir Development Agency (İZKA)](https://www.izka.org.tr/)**: for the inspiring publicly available sector publications
+- **[Chart.js](https://www.chartjs.org/)**: all charts and sparklines
+- **[jsPDF](https://github.com/parallax/jsPDF)** + **[html2canvas](https://html2canvas.hertzen.com/)**: PDF generation infrastructure
+- **[DejaVu Sans](https://dejavu-fonts.github.io/)**: font with Turkish character support
 
 ---
 
@@ -423,6 +423,6 @@ For questions or feedback, please open a GitHub Issue.
 
 **Made for İzQ Hackability 2026 · 9 May 2026 · Team-6**
 
-[🇹🇷 Türkçe oku](./README.md)
+[Türkçe oku](./README.md)
 
 </div>

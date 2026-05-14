@@ -1,10 +1,10 @@
 <div align="center">
 
-**🇹🇷 Türkçe** · [🇬🇧 English](./README.en.md)
+**TR** · [EN](./README.en.md)
 
 # 🌊 İZPORT
 
-### Liman Operasyon Zekâsı — Konsept Demo
+### Liman Operasyon Zekâsı: Konsept Demo
 
 ![Status](https://img.shields.io/badge/Status-Concept_Demo-orange?style=flat-square)
 ![License](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey?style=flat-square)
@@ -25,13 +25,13 @@
 
 ## ⚠️ Önemli Uyarı / Disclaimer
 
-Bu çalışma, **İzQ Girişimcilik Merkezi** tarafından düzenlenen **"Hackability — Sürdürülebilirlik, Yapay Zeka ve Kodlama"** yarışması kapsamında **9 Mayıs 2026** tarihinde **12 saatte** geliştirilmiş bir konsept fikir gösterimidir.
+Bu çalışma, **İzQ Girişimcilik Merkezi** tarafından düzenlenen **"Hackability: Sürdürülebilirlik, Yapay Zeka ve Kodlama"** yarışması kapsamında **9 Mayıs 2026** tarihinde **12 saatte** geliştirilmiş bir konsept fikir gösterimidir.
 
 **Bu bir gerçek uygulama değildir.**
 
 - **İzmir Büyükşehir Belediyesi**, **İZPORT Liman İşletmeciliği**, **İzmir Kalkınma Ajansı** ve adı geçen tüm şirketler (Petkim, Tüpraş, SOCAR, TCDD, Petrol Ofisi, Total, Alpet, Ege Gaz, Milangaz, Habaş, Ege Gübre, Ege Çelik, IDÇ, ETKİ, Batıliman, Nemport, Ulusoy) ile global armatörler (MSC, Maersk, Evergreen, CMA, COSCO, ONE, HMM, NYK) ile bu projenin **hiçbir resmi bağı, onayı veya sponsorluğu yoktur**.
 
-- Bazı sektörel veriler **İzmir Kalkınma Ajansı'nın kamuya açık yayınlarından ilham almıştır**; tüm gemi adları, anlık emisyon değerleri, terminal kapasiteleri, çalışan profilleri ve uyarı senaryoları **tamamen kurgusal ve illustratiftir** — bu kuruluşların gerçek operasyonel performansını yansıtmaz.
+- Bazı sektörel veriler **İzmir Kalkınma Ajansı'nın kamuya açık yayınlarından ilham almıştır**; tüm gemi adları, anlık emisyon değerleri, terminal kapasiteleri, çalışan profilleri ve uyarı senaryoları **tamamen kurgusal ve illustratiftir**; bu kuruluşların gerçek operasyonel performansını yansıtmaz.
 
 - Adı geçen tüm marka, şirket ve kurum adları yalnızca **konsept gösterimi amacıyla** kullanılmıştır; ilgili haklar sahiplerine aittir.
 
@@ -81,22 +81,22 @@ Gerçek bir uygulamada:
 - Yazılım farklı dil, framework veya mimari ile yeniden yazılabilir
 - Özellik kapsamı ve UX kararları ihtiyaca göre tamamen değişebilir
 
-Bu repo'nun amacı hazır bir ürün, production altyapısı veya implementasyon önerisi sunmak değil — kavramın **UI/UX olarak nasıl görünebileceğini somutlaştırmak**tır. Tüm kararlar 12 saatlik bir yarışma kapsamında verilmiş ilk-yaklaşımlardır.
+Bu repo'nun amacı hazır bir ürün, production altyapısı veya implementasyon önerisi sunmak değildir; hedef, kavramın **UI/UX olarak nasıl görünebileceğini somutlaştırmaktır**. Tüm kararlar 12 saatlik bir yarışma kapsamında verilmiş ilk-yaklaşımlardır.
 
 ---
 
 ## ✨ Öne Çıkanlar
 
-- **Gerçekçi liman operasyon paneli** — 21 liman, 12 gemi, 4 operatör profili, karadan güç şebekesi, kural motoru
-- **Simülasyon motoru** — 3.5 saniye tick döngüsü; emisyonlar, hava ve gemi durumu canlı olarak güncellenir
-- **Kural-tabanlı uyarı motoru** — 5 kural ailesi (aggregate exceedance, dispersion risk, ETA conflict, vb.), her uyarıda eyleme dönüşür öneriler
-- **Hash-zincirli denetim kaydı** — FNV-1a hash ile tampering tespiti, salt-okunur etkinlik logu
-- **AI Operasyon Asistanı** — bağlam-farkındalı deterministic yanıt motoru (canlı veri-bağlantılı asistan izlenimi, gerçek LLM kullanılmıyor)
-- **Türkçe karakter destekli PDF rapor üretimi** — jsPDF + DejaVu Sans embed, 6 farklı şablon
-- **Bilingual UI** — 600+ i18n anahtarı, TR/EN tam parite, lokal sayı ve tarih formatları
-- **Açık ve koyu tema** — atomik geçiş, FOUC önlemli early bootstrap
-- **localStorage kalıcılığı** — manuel girişler, tercihler, denetim kaydı oturumlar arası korunur
-- **Responsive tasarım** — desktop birinci, mobil sunulabilir (4 breakpoint: 1280 / 1180 / 720 / 480 px)
+- **Gerçekçi liman operasyon paneli**: 21 liman, 12 gemi, 4 operatör profili, karadan güç şebekesi, kural motoru
+- **Simülasyon motoru**: 3.5 saniye tick döngüsü; emisyonlar, hava ve gemi durumu canlı olarak güncellenir
+- **Kural-tabanlı uyarı motoru**: 5 kural ailesi (aggregate exceedance, dispersion risk, ETA conflict, vb.), her uyarıda eyleme dönüşür öneriler
+- **Hash-zincirli denetim kaydı**: FNV-1a hash ile tampering tespiti, salt-okunur etkinlik logu
+- **AI Operasyon Asistanı**: bağlam-farkındalı deterministic yanıt motoru (canlı veri-bağlantılı asistan izlenimi, gerçek LLM kullanılmıyor)
+- **Türkçe karakter destekli PDF rapor üretimi**: jsPDF + DejaVu Sans embed, 6 farklı şablon
+- **Bilingual UI**: 600+ i18n anahtarı, TR/EN tam parite, lokal sayı ve tarih formatları
+- **Açık ve koyu tema**: atomik geçiş, FOUC önlemli early bootstrap
+- **localStorage kalıcılığı**: manuel girişler, tercihler, denetim kaydı oturumlar arası korunur
+- **Responsive tasarım**: desktop birinci, mobil sunulabilir (4 breakpoint: 1280 / 1180 / 720 / 480 px)
 
 ---
 
@@ -258,8 +258,8 @@ Kurumsal-grade PDF rapor builder.
 
 **Bölümler:**
 
-- Sol panel — Builder: 6 şablon (Yönetici Özeti, Uyumluluk Denetimi, Operasyon Brifingi, Karadan Güç ROI, Uyarı Özeti, Özel), tarih aralığı, 10 bölüm toggle, kirletici filtresi, severity filtresi, kapak alanları
-- Sağ panel — Canlı önizleme: A4 sayfa simülasyonu, kapak + KPI grid + vessel mini-tablosu + Chart.js sparkline'ları + son alarmlar + uyumluluk tablosu
+- Sol panel · Builder: 6 şablon (Yönetici Özeti, Uyumluluk Denetimi, Operasyon Brifingi, Karadan Güç ROI, Uyarı Özeti, Özel), tarih aralığı, 10 bölüm toggle, kirletici filtresi, severity filtresi, kapak alanları
+- Sağ panel · Canlı önizleme: A4 sayfa simülasyonu, kapak + KPI grid + vessel mini-tablosu + Chart.js sparkline'ları + son alarmlar + uyumluluk tablosu
 - PDF üretim akışı: DejaVu Sans Türkçe karakter desteği, programatik primitives (cover, heading, table, kpiGrid), html2canvas snapshot, sayfa kesimi yönetimi
 - CSV export
 - Recent reports listesi (localStorage'da meta)
@@ -352,7 +352,7 @@ Tüm uygulama state'i 16 slice'a bölünmüştür; Proxy + Pub/Sub pattern ile y
 | `meta` | tick_count, sim_status, started_at | Hayır |
 | `ui` | language, theme, audit_open | **Evet** |
 | `report_config` | Rapor builder seçimleri | **Evet** |
-| `route` | { id, params } — router'dan | Hayır |
+| `route` | { id, params } (router'dan) | Hayır |
 | `settings` | sim_paused, alert_engine_enabled | **Evet** |
 | `accounts` | { active_id, list[] } | **Evet** |
 | `audit_log` | Hash zincirli kayıtlar | **Evet** |
@@ -367,7 +367,7 @@ Bazı sektörel veriler (liman sayısı, terminal kategorileri vb.) **İzmir Kal
 
 | | |
 |---|---|
-| **Yarışma** | Hackability — Sürdürülebilirlik, Yapay Zeka ve Kodlama |
+| **Yarışma** | Hackability: Sürdürülebilirlik, Yapay Zeka ve Kodlama |
 | **Tarih** | 9 Mayıs 2026 |
 | **Süre** | 12 saat |
 | **Düzenleyen** | İzQ Girişimcilik Merkezi |
@@ -381,11 +381,11 @@ Bu proje **[Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 Interna
 
 **Kısa özet:**
 
-- ✅ **Görüntüleyebilirsiniz** — kaynak kodu okuyabilirsiniz
-- ✅ **Klonlayıp yerelde çalıştırabilirsiniz** — kişisel/eğitsel değerlendirme için
+- ✅ **Görüntüleyebilirsiniz**: kaynak kodu okuyabilirsiniz
+- ✅ **Klonlayıp yerelde çalıştırabilirsiniz**: kişisel/eğitsel değerlendirme için
 - ✅ **Atıf vererek olduğu gibi paylaşabilirsiniz**
-- ❌ **Ticari kullanım yapamazsınız** — satış, monetize, müşteri demosu, ticari ürün entegrasyonu
-- ❌ **Değiştiremezsiniz veya türev eser oluşturamazsınız** — kod parçaları başka projelerde kullanılamaz
+- ❌ **Ticari kullanım yapamazsınız**: satış, monetize, müşteri demosu, ticari ürün entegrasyonu
+- ❌ **Değiştiremezsiniz veya türev eser oluşturamazsınız**: kod parçaları başka projelerde kullanılamaz
 - ❌ **Atıfı veya disclaimer'ı kaldıramazsınız**
 
 Tam lisans metni için: **[LICENSE](./LICENSE)** dosyasına bakın.
@@ -402,11 +402,11 @@ Bu projede adı geçen tüm marka, şirket, kurum ve gemi adları (örnek: İZPO
 
 ## 🙏 Teşekkürler
 
-- **[İzQ Girişimcilik Merkezi](https://izqgirisimcilik.com/)** — Hackability 2026 yarışmasını düzenlediği için
-- **[İzmir Kalkınma Ajansı (İZKA)](https://www.izka.org.tr/)** — İlham veren kamuya açık sektör yayınları için
-- **[Chart.js](https://www.chartjs.org/)** — Tüm grafik ve sparkline'lar
-- **[jsPDF](https://github.com/parallax/jsPDF)** + **[html2canvas](https://html2canvas.hertzen.com/)** — PDF üretim altyapısı
-- **[DejaVu Sans](https://dejavu-fonts.github.io/)** — Türkçe karakter desteği için font
+- **[İzQ Girişimcilik Merkezi](https://izq.com.tr/)**: Hackability 2026 yarışmasını düzenlediği için
+- **[İzmir Kalkınma Ajansı (İZKA)](https://www.izka.org.tr/)**: İlham veren kamuya açık sektör yayınları için
+- **[Chart.js](https://www.chartjs.org/)**: Tüm grafik ve sparkline'lar
+- **[jsPDF](https://github.com/parallax/jsPDF)** + **[html2canvas](https://html2canvas.hertzen.com/)**: PDF üretim altyapısı
+- **[DejaVu Sans](https://dejavu-fonts.github.io/)**: Türkçe karakter desteği için font
 
 ---
 
@@ -423,6 +423,6 @@ Sorularınız veya geri bildirimleriniz için GitHub Issues üzerinden iletişim
 
 **Made for İzQ Hackability 2026 · 9 May 2026 · Team-6**
 
-[🇬🇧 Read in English](./README.en.md)
+[Read in English](./README.en.md)
 
 </div>
