@@ -30,7 +30,7 @@ const dictionaries = {
     /* disclaimer (legal / demo indicators) */
     'disclaimer.popup.title':       'Konsept Demo · Hackability 2026',
     'disclaimer.popup.intro':       'Bu çalışma, İzQ Girişimcilik Merkezi tarafından düzenlenen "Hackability — Sürdürülebilirlik, Yapay Zeka ve Kodlama" yarışması kapsamında 9 Mayıs 2026 tarihinde 12 saatte geliştirilmiş bir konsept fikir gösterimidir.',
-    'disclaimer.popup.warning':     '⚠️ Bu bir gerçek uygulama değildir.',
+    'disclaimer.popup.warning':     '⚠️ Bu gerçek bir uygulama değildir.',
     'disclaimer.popup.bullet1':     'İzmir Büyükşehir Belediyesi, İZPORT Liman İşletmeciliği, İzmir Kalkınma Ajansı ve adı geçen tüm şirketler (Petkim, Tüpraş, SOCAR, TCDD, Petrol Ofisi, Total, Alpet, Ege Gaz, Milangaz, Habaş, Ege Gübre, Ege Çelik, IDÇ, ETKİ, Batıliman, Nemport, Ulusoy) ile global armatörler (MSC, Maersk, Evergreen, CMA, COSCO, ONE, HMM, NYK) ile bu projenin hiçbir resmi bağı, onayı veya sponsorluğu yoktur.',
     'disclaimer.popup.bullet2':     'Bazı sektörel veriler İzmir Kalkınma Ajansı\'nın kamuya açık yayınlarından ilham almıştır; tüm gemi adları, anlık emisyon değerleri, terminal kapasiteleri, çalışan profilleri ve uyarı senaryoları tamamen kurgusal ve illustratiftir.',
     'disclaimer.popup.bullet3':     'Adı geçen tüm marka, şirket ve kurum adları yalnızca konsept gösterimi amacıyla kullanılmıştır; ilgili haklar sahiplerine aittir.',

@@ -27,7 +27,7 @@
 
 Bu çalışma, **İzQ Girişimcilik Merkezi** tarafından düzenlenen **"Hackability: Sürdürülebilirlik, Yapay Zeka ve Kodlama"** yarışması kapsamında **9 Mayıs 2026** tarihinde **12 saatte** geliştirilmiş bir konsept fikir gösterimidir.
 
-**Bu bir gerçek uygulama değildir.**
+**Bu gerçek bir uygulama değildir.**
 
 - **İzmir Büyükşehir Belediyesi**, **İZPORT Liman İşletmeciliği**, **İzmir Kalkınma Ajansı** ve adı geçen tüm şirketler (Petkim, Tüpraş, SOCAR, TCDD, Petrol Ofisi, Total, Alpet, Ege Gaz, Milangaz, Habaş, Ege Gübre, Ege Çelik, IDÇ, ETKİ, Batıliman, Nemport, Ulusoy) ile global armatörler (MSC, Maersk, Evergreen, CMA, COSCO, ONE, HMM, NYK) ile bu projenin **hiçbir resmi bağı, onayı veya sponsorluğu yoktur**.
 
