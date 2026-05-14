@@ -202,10 +202,35 @@
       "footer";
   }
   .app-footer { padding: 6px var(--sp-4); font-size: 10px; }
-  .app-sidebar { flex-direction: row; height: auto; border-right: none; border-bottom: 1px solid var(--border-subtle); }
+  .app-sidebar { flex-direction: row; height: auto; border-right: none; border-bottom: 1px solid var(--border-subtle); overflow-x: auto; overflow-y: hidden; }
+  /* Sidebar mobile — kompakt brand + yatay nav (account switcher ve attribution mobilde gizli) */
+  .app-sidebar .sidebar-brand { padding: 8px 12px; border-bottom: none; border-right: 1px solid var(--border-subtle); flex-shrink: 0; }
+  .app-sidebar .sidebar-brand-meta { display: none; }
+  .app-sidebar .sidebar-nav { flex-direction: row; padding: 6px; gap: 4px; overflow-x: auto; overflow-y: hidden; flex: 1; }
+  .app-sidebar .sidebar-section { display: none; }
+  .app-sidebar .nav-item { flex-direction: column; gap: 2px; padding: 6px 10px; white-space: nowrap; min-width: 0; }
+  .app-sidebar .nav-label { font-size: 10px; }
+  .app-sidebar .nav-item-icon { width: 16px; height: 16px; }
+  .app-sidebar .nav-item.is-active::before { display: none; }
+  .app-sidebar .nav-item-badge { position: absolute; top: 3px; right: 3px; margin: 0; }
+  .app-sidebar .sidebar-attribution { display: none; }
+  /* Account switcher mobilde: kompakt avatar butonu olarak nav'ın sağ kenarında */
+  .app-sidebar .sidebar-footer { border-top: none; border-left: 1px solid var(--border-subtle); padding: 6px 10px; flex-shrink: 0; }
+  .app-sidebar .sidebar-footer-btn { width: auto; }
+  .app-sidebar .sidebar-footer-meta,
+  .app-sidebar .sidebar-footer-chevron { display: none; }
+  .app-sidebar .sidebar-footer-avatar { width: 30px; height: 30px; font-size: 11px; }
   .bento--kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 152px; }
-  .app-main { padding: var(--sp-4); }
+  .app-main { padding: var(--sp-4); overflow-x: auto; }
   .page-header h1 { font-size: var(--fs-xl); }
+}
+
+@media (max-width: 480px) {
+  /* Phone-size finishing touches */
+  .app-main { padding: var(--sp-3); }
+  .app-footer { padding: 4px 8px; }
+  .app-footer-content { font-size: 9px; line-height: 1.3; }
+  .page-header h1 { font-size: var(--fs-lg); }
 }
 
 /* Copilot mount */

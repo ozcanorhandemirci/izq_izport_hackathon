@@ -1517,11 +1517,47 @@ select.form-input {
   .shore-summary { grid-template-columns: repeat(2, 1fr); }
   .copilot-drawer { width: 100%; max-width: 100%; }
   .copilot-fab { right: var(--sp-4); bottom: var(--sp-4); }
-  .topbar-cluster { gap: var(--sp-2); }
   .topbar-clock { display: none; }
+  /* Topbar mobil: tek satır kilitli, üst/alt clip yok, 3 pill crossfade carousel'i */
+  .app-topbar { padding: 4px var(--sp-3); gap: var(--sp-2); flex-wrap: nowrap; overflow: hidden; }
+  .topbar-cluster { gap: var(--sp-2); flex-wrap: nowrap; position: relative; padding-left: 110px; min-width: 0; }
+  /* Pill iç ikincil span'ler mobilde gizli — Weather pill .muted (temp/humidity), AQI label (sınıfsız span) */
+  .topbar-pill .muted { display: none; }
+  .topbar-pill > span:not([class]) { display: none; }
+  /* Carousel: 3 pill aynı slotta üst üste. Aktif pill :root data-attr ile belirlenir,
+     böylece topbar 1sn'de bir re-render olsa bile carousel state'i kaybolmuyor. */
+  .app-topbar .topbar-cluster > .topbar-pill {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 102px;
+    max-width: 102px;
+    opacity: 0;
+    transition: opacity 0.45s ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  :root[data-pill-active="0"] .app-topbar .topbar-cluster > .topbar-pill:nth-of-type(1),
+  :root[data-pill-active="1"] .app-topbar .topbar-cluster > .topbar-pill:nth-of-type(2),
+  :root[data-pill-active="2"] .app-topbar .topbar-cluster > .topbar-pill:nth-of-type(3) {
+    opacity: 1;
+  }
+  .topbar-title { font-size: var(--fs-sm); }
+  .topbar-title-sub { display: none; }
   .form-grid-2, .form-grid-3 { grid-template-columns: 1fr; }
   .disclaimer-popup-overlay { padding: var(--sp-4); }
   .disclaimer-popup-head { padding: var(--sp-4); }
   .disclaimer-popup-body { padding: var(--sp-4); }
   .topbar-demo-badge { font-size: 9px; padding: 2px 6px; letter-spacing: 0.1em; }
+}
+
+@media (max-width: 480px) {
+  /* Phone size: topbar başlığı gizle — DEMO + carousel + butonlar için yer açılsın */
+  .topbar-title { display: none; }
+  /* Disclaimer popup phone tweaks — ack butonu parmak boyu */
+  .disclaimer-popup-foot { padding: var(--sp-3); }
+  .disclaimer-popup-ack { width: 100%; }
 }

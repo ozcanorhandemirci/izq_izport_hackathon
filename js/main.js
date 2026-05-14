@@ -65,6 +65,15 @@ async function bootstrap() {
   await whenChartReady();
   startRouter($('page-root'));
 
+  /* Mobile pill carousel state — :root data-attr rotates every 3s so the topbar's
+   * 1-second clock re-render doesn't reset the carousel. */
+  let pillIdx = 0;
+  document.documentElement.setAttribute('data-pill-active', '0');
+  setInterval(() => {
+    pillIdx = (pillIdx + 1) % 3;
+    document.documentElement.setAttribute('data-pill-active', String(pillIdx));
+  }, 3000);
+
   if (typeof window !== 'undefined') {
     window.__PORT_IQ__ = { store };
   }

@@ -39,6 +39,13 @@
 .chart-frame[data-h="lg"]  { height: 320px; }
 .chart-frame[data-h="xl"]  { height: 420px; }
 
+@media (max-width: 480px) {
+  /* Phone-size chart heights — küçük ekranda ekonomik */
+  .chart-frame[data-h="md"] { height: 180px; }
+  .chart-frame[data-h="lg"] { height: 220px; }
+  .chart-frame[data-h="xl"] { height: 280px; }
+}
+
 /* Filter rail (used by emissions, alerts, vessels) */
 .filter-rail {
   display: flex;
