@@ -163,7 +163,7 @@ export async function createPdf({ title = 'İZPORT Report', author = '', subtitl
     pdf.setFontSize(8);
     setColor(T.subtle, 'text');
     pdf.text(`${idx} / ${total}`, PAGE.w / 2, PAGE.h - 8, { align: 'center' });
-    pdf.text(meta.brandLine || 'İzmir Büyükşehir Belediyesi', PAGE.margin, PAGE.h - 8);
+    pdf.text(meta.brandLine || 'İzmir Liman Konsept Demosu', PAGE.margin, PAGE.h - 8);
     pdf.text(new Date().toISOString().slice(0, 10), PAGE.w - PAGE.margin, PAGE.h - 8, { align: 'right' });
   }
 
@@ -197,7 +197,7 @@ export async function createPdf({ title = 'İZPORT Report', author = '', subtitl
     setFontStyle('normal');
     pdf.setFontSize(9);
     pdf.setTextColor(220, 240, 250);
-    pdf.text('İzmir Büyükşehir Belediyesi · Liman Operasyonları', PAGE.margin, 74);
+    pdf.text('İzmir Liman Operasyonları · Hackability 2026 Konsept Demosu', PAGE.margin, 74);
 
     cursorY = 110;
     setFontStyle('normal');

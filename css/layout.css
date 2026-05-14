@@ -5,12 +5,32 @@
 .app-shell {
   display: grid;
   grid-template-columns: var(--sidebar-w) 1fr;
-  grid-template-rows: var(--topbar-h) 1fr;
+  grid-template-rows: var(--topbar-h) 1fr auto;
   grid-template-areas:
     "sidebar topbar"
-    "sidebar main";
+    "sidebar main"
+    "footer  footer";
   height: 100vh;
   width: 100vw;
+}
+
+/* Persistent disclaimer band — always visible regardless of route */
+.app-footer {
+  grid-area: footer;
+  background: var(--bg-1);
+  border-top: 1px solid var(--border-subtle);
+  color: var(--text-tertiary);
+  font-size: var(--fs-xs);
+  padding: 6px var(--sp-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--dur-base) var(--ease-out), border-color var(--dur-base);
+}
+.app-footer-content {
+  text-align: center;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
 }
 
 .app-sidebar {
@@ -174,12 +194,14 @@
 @media (max-width: 720px) {
   .app-shell {
     grid-template-columns: 1fr;
-    grid-template-rows: var(--topbar-h) auto 1fr;
+    grid-template-rows: var(--topbar-h) auto 1fr auto;
     grid-template-areas:
       "topbar"
       "sidebar"
-      "main";
+      "main"
+      "footer";
   }
+  .app-footer { padding: 6px var(--sp-4); font-size: 10px; }
   .app-sidebar { flex-direction: row; height: auto; border-right: none; border-bottom: 1px solid var(--border-subtle); }
   .bento--kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 152px; }
   .app-main { padding: var(--sp-4); }

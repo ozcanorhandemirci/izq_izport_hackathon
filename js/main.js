@@ -21,6 +21,7 @@ import { init as initSidebar }      from './components/sidebar.js';
 import { init as initTopbar }       from './components/topbar.js';
 import { init as initCopilot }      from './components/aiCopilot.js';
 import { init as initAuditDrawer }  from './components/auditDrawer.js';
+import { init as initDisclaimer }   from './components/disclaimer.js';
 
 function whenChartReady() {
   return new Promise((resolve) => {
@@ -53,6 +54,7 @@ async function bootstrap() {
   initTopbar($('topbar'));
   initCopilot($('copilot-mount'));
   initAuditDrawer($('audit-mount'));
+  initDisclaimer();
 
   /* 4. Boot simulation + alert engine + logger. */
   startSimulation();

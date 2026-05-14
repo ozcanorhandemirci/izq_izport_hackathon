@@ -46,6 +46,8 @@ function render() {
   const now = new Date();
 
   rootEl.innerHTML = `
+    <span class="topbar-demo-badge" title="${t('disclaimer.footer.text')}" aria-label="${t('disclaimer.footer.text')}">${t('disclaimer.badge')}</span>
+
     <div class="topbar-title">
       <span>${t('topbar.port')}</span>
       <span class="topbar-title-sub">· ${t('topbar.subtitle')}</span>

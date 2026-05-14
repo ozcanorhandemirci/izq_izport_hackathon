@@ -1,7 +1,17 @@
 # İZPORT — Proje Raporu
 
+> ⚠️ **Konsept Demo — Gerçek bir uygulama değildir.**
+>
+> Bu çalışma, İzQ Girişimcilik Merkezi tarafından düzenlenen "Hackability — Sürdürülebilirlik, Yapay Zeka ve Kodlama" yarışması kapsamında 9 Mayıs 2026 tarihinde **12 saatte** geliştirilmiş bir konsept fikir gösterimidir.
+>
+> İzmir Büyükşehir Belediyesi, İZPORT Liman İşletmeciliği, İzmir Kalkınma Ajansı ve adı geçen tüm şirketler (Petkim, Tüpraş, SOCAR, TCDD, Petrol Ofisi, Total, Alpet, Ege Gaz, Milangaz, Habaş, Ege Gübre, Ege Çelik, IDÇ, ETKİ, Batıliman, Nemport, Ulusoy) ile global armatörler (MSC, Maersk, Evergreen, CMA, COSCO, ONE, HMM, NYK) ile bu projenin **hiçbir resmi bağı, onayı veya sponsorluğu yoktur**.
+>
+> Bazı sektörel veriler İzmir Kalkınma Ajansı'nın kamuya açık yayınlarından ilham almıştır; tüm gemi adları, anlık emisyon değerleri, terminal kapasiteleri, çalışan profilleri ve uyarı senaryoları **tamamen kurgusal ve illustratiftir**. Adı geçen tüm marka, şirket ve kurum adları yalnızca konsept gösterimi amacıyla kullanılmıştır; ilgili haklar sahiplerine aittir.
+>
+> **Takım:** Takım-6 · **Yarışma:** Hackability 9 Mayıs 2026 · **Düzenleyen:** İzQ Girişimcilik Merkezi
+
 > **İzmir Liman Operasyonları Kurumsal Yönetim Paneli**
-> İzmir Büyükşehir Belediyesi · Liman Emisyon ve Operasyon Zekâsı Platformu
+> İzmir Liman Emisyon ve Operasyon Zekâsı — Hackability 2026 Konsept Çalışması
 
 ---
 
@@ -31,8 +41,10 @@ Platform; gerçek bir liman otoritesinin günlük iş akışını modelleyen **6
 |---|---|
 | Proje adı | İZPORT |
 | Alt başlık | İzmir Liman Operasyonları Kurumsal Yönetim Paneli |
-| Marka rengi | İzmir mavisi `#009DC4` (İBB kurumsal kimlik tonunda) |
-| Kurumsal kimlik | İzmir Büyükşehir Belediyesi · Liman Operasyonları |
+| Marka rengi | İzmir mavisi `#009DC4` |
+| Konsept hedef | İzmir liman operasyonları (sahiplik iddiası yoktur) |
+| Geliştirme | Takım-6 · Hackability 2026 yarışması |
+| Düzenleyen | İzQ Girişimcilik Merkezi |
 | Hedef coğrafya | İzmir Körfezi (38.40–38.50°N, 27.05–27.20°E) |
 | Geliştirme dili | JavaScript (ES6+ modüller) |
 | Tarayıcı API'leri | Proxy, Pub/Sub, Intl, localStorage, fetch, Canvas |
@@ -369,8 +381,8 @@ Sağ slide-in drawer, sağ-altta yeşil nabızlı yıldız FAB.
 **Görsel kimlik:**
 - Gradient mavi "AI v2" PRO badge
 - Yeşil nabız atan "Çevrimiçi" presence dot
-- Subtitle: "Çevrimiçi · GPT-5 destekli"
-- Footer: 🔒 + "Uçtan uca şifreli · v2.4.1"
+- Subtitle: "Operasyon asistanı · Konsept demo"
+- Footer: 🔒 + "Konsept demo · Tüm veriler kurgusaldır"
 
 **Bağlam-farkındalı yanıt motoru** — gerçek LLM bağlanmadan canlı izlenimi veren deterministic pattern matcher:
 
@@ -533,7 +545,7 @@ localStorage'a yazılan slice'lar:
 | Türkçe desteği | Tam — ş/ğ/ı/İ/ç/ö/ü doğru |
 | Sayfa boyutu | A4 portre (210×297 mm), 14mm margin |
 | Sayfa header | Brand banner + başlık (sağ) + alt çizgi |
-| Sayfa footer | Sayfa #, "İzmir Büyükşehir Belediyesi", tarih |
+| Sayfa footer | Sayfa #, "İzmir Liman Konsept Demosu", tarih |
 | Programatik öğeler | `cover`, `heading`, `subheading`, `paragraph`, `bullet`, `kpiGrid`, `table`, `divider`, `pageBreak` |
 | Görsel öğe | `snapshot(domEl)` html2canvas ile 2× DPR yakalama |
 | Tablo akıllılığı | Hücre içi multi-line wrap, dinamik satır yüksekliği, sayfa kesimi ile başlık yeniden çizimi |
@@ -715,7 +727,7 @@ ES modules `file://` protokolünde çalışmaz, basit bir HTTP server gerekli (`
 
 > "İZPORT, İzmir körfezindeki **21 limanın** karadan güç orkestrasyonunu, hava kalitesi izlemesini ve uyumluluk denetimini tek bir kurumsal panelden yöneten bir gerçek-zamanlı operasyon zekâsı platformudur. Saf vanilya web teknolojileriyle, **hiçbir framework olmadan** geliştirildi — sıfır build adımı, tek bir HTTP server ile çalışır."
 
-### 11.2 İzmir BŞB kurumsal kimlik (15 sn)
+### 11.2 Marka ve görsel kimlik (15 sn)
 
 > "Marka kimliği İzmir mavisi `#009DC4` üzerine kurulu. Sidebar logosu **İZP** ile İzmir+Port'u tek yuvarlak nişanda birleştiriyor. Açık ve koyu mod arasında atomik geçiş — kontrol odası kullanımı için koyu varsayılan, yönetici brifingleri için açık alternatif."
 
@@ -760,7 +772,7 @@ ES modules `file://` protokolünde çalışmaz, basit bir HTTP server gerekli (`
 
 | Bileşen | Lisans |
 |---|---|
-| Proje kodu | Talep üzerine — İzmir BŞB lisansına bağlı |
+| Proje kodu | Konsept demo (yarışma teslimi) — ticari kullanım dışıdır |
 | Chart.js | MIT |
 | jsPDF | MIT |
 | html2canvas | MIT |
@@ -769,10 +781,13 @@ ES modules `file://` protokolünde çalışmaz, basit bir HTTP server gerekli (`
 
 ---
 
-## 14. İletişim ve Destek
+## 14. Yarışma ve Geliştirme
 
-Proje sahibi: **İzmir Büyükşehir Belediyesi · Liman Operasyonları**
-Geliştirme: **PORT.IQ İzmir takımı**
+**Geliştirici:** Takım-6
+**Yarışma:** Hackability — Sürdürülebilirlik, Yapay Zeka ve Kodlama
+**Tarih:** 9 Mayıs 2026 · **Süre:** 12 saat
+**Düzenleyen:** İzQ Girişimcilik Merkezi
+**Konsept hedef:** İzmir liman operasyonları (sahiplik iddiası yoktur)
 Demo URL: localhost:5173 (HTTP server gerektirir)
 
 ---

@@ -1377,6 +1377,140 @@ select.form-input {
 .empty-state-body  { font-size: var(--fs-sm); max-width: 380px; }
 
 /* ============================================================
+   Disclaimer — DEMO badge (topbar) + opening popup
+   ============================================================ */
+.topbar-demo-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: var(--r-pill);
+  background: var(--status-warning);
+  color: #fff;
+  font-size: var(--fs-2xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.14em;
+  line-height: 1;
+  box-shadow: var(--status-warning-glow);
+  flex-shrink: 0;
+  cursor: help;
+  margin-right: var(--sp-2);
+}
+
+.disclaimer-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--modal-overlay-bg, rgba(0, 0, 0, 0.55));
+  backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
+  padding: var(--sp-6);
+  z-index: 2000;
+  animation: disclaimer-fade-in var(--dur-base) var(--ease-out);
+}
+@keyframes disclaimer-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.disclaimer-popup {
+  background: var(--bg-1);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg);
+  width: min(640px, 100%);
+  max-height: calc(100vh - var(--sp-9));
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  box-shadow: var(--shadow-3);
+  overflow: hidden;
+  animation: disclaimer-rise var(--dur-base) var(--ease-out);
+}
+@keyframes disclaimer-rise {
+  from { transform: translateY(12px); opacity: 0.4; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+.disclaimer-popup-head {
+  padding: var(--sp-5) var(--sp-5) var(--sp-4);
+  border-bottom: 1px solid var(--border-subtle);
+  background: linear-gradient(135deg, var(--brand-primary-soft, rgba(0, 157, 196, 0.08)) 0%, transparent 60%);
+}
+.disclaimer-popup-head h2 {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.disclaimer-popup-body {
+  padding: var(--sp-5);
+  overflow-y: auto;
+  color: var(--text-secondary);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+}
+.disclaimer-popup-body p { margin: 0 0 var(--sp-3); }
+.disclaimer-popup-body p:last-child { margin-bottom: 0; }
+.disclaimer-popup-body ul {
+  list-style: none;
+  margin: 0 0 var(--sp-3);
+  padding: 0;
+  display: grid;
+  gap: var(--sp-3);
+}
+.disclaimer-popup-body li {
+  position: relative;
+  padding: var(--sp-3) var(--sp-4);
+  padding-left: calc(var(--sp-4) + 10px);
+  background: var(--bg-2);
+  border-left: 3px solid var(--brand-primary);
+  border-radius: var(--r-md);
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+}
+.disclaimer-popup-warning {
+  background: var(--status-warning-soft, rgba(186, 117, 23, 0.12));
+  border: 1px solid var(--status-warning);
+  color: var(--text-primary);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-md);
+  font-weight: var(--fw-semibold);
+  text-align: center;
+}
+.disclaimer-popup-team {
+  font-family: var(--font-mono);
+  color: var(--text-tertiary);
+  text-align: center;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.04em;
+  padding-top: var(--sp-2);
+  border-top: 1px dashed var(--border-subtle);
+}
+
+.disclaimer-popup-foot {
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--sp-3) var(--sp-5);
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-2);
+}
+.disclaimer-popup-ack {
+  background: var(--brand-primary);
+  color: #fff;
+  border: 1px solid var(--brand-primary);
+  padding: 9px 22px;
+  border-radius: var(--r-md);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast);
+  box-shadow: var(--brand-glow);
+}
+.disclaimer-popup-ack:hover { background: var(--brand-primary-deep); }
+.disclaimer-popup-ack:focus-visible { outline: 2px solid var(--brand-primary-bright); outline-offset: 2px; }
+
+/* ============================================================
    Misc small responsive tweaks
    ============================================================ */
 @media (max-width: 720px) {
@@ -1386,4 +1520,8 @@ select.form-input {
   .topbar-cluster { gap: var(--sp-2); }
   .topbar-clock { display: none; }
   .form-grid-2, .form-grid-3 { grid-template-columns: 1fr; }
+  .disclaimer-popup-overlay { padding: var(--sp-4); }
+  .disclaimer-popup-head { padding: var(--sp-4); }
+  .disclaimer-popup-body { padding: var(--sp-4); }
+  .topbar-demo-badge { font-size: 9px; padding: 2px 6px; letter-spacing: 0.1em; }
 }

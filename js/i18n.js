@@ -25,7 +25,19 @@ const dictionaries = {
     'brand.name':         'İZPORT',
     'brand.subtitle':     'İzmir Liman Operasyonları Kurumsal Yönetim Paneli',
     'brand.tag':          '',
-    'brand.attribution':  'İzmir Büyükşehir Belediyesi',
+    'brand.attribution':  'İzmir Liman Konsept Demosu',
+
+    /* disclaimer (legal / demo indicators) */
+    'disclaimer.popup.title':       'Konsept Demo · Hackability 2026',
+    'disclaimer.popup.intro':       'Bu çalışma, İzQ Girişimcilik Merkezi tarafından düzenlenen "Hackability — Sürdürülebilirlik, Yapay Zeka ve Kodlama" yarışması kapsamında 9 Mayıs 2026 tarihinde 12 saatte geliştirilmiş bir konsept fikir gösterimidir.',
+    'disclaimer.popup.warning':     '⚠️ Bu bir gerçek uygulama değildir.',
+    'disclaimer.popup.bullet1':     'İzmir Büyükşehir Belediyesi, İZPORT Liman İşletmeciliği, İzmir Kalkınma Ajansı ve adı geçen tüm şirketler (Petkim, Tüpraş, SOCAR, TCDD, Petrol Ofisi, Total, Alpet, Ege Gaz, Milangaz, Habaş, Ege Gübre, Ege Çelik, IDÇ, ETKİ, Batıliman, Nemport, Ulusoy) ile global armatörler (MSC, Maersk, Evergreen, CMA, COSCO, ONE, HMM, NYK) ile bu projenin hiçbir resmi bağı, onayı veya sponsorluğu yoktur.',
+    'disclaimer.popup.bullet2':     'Bazı sektörel veriler İzmir Kalkınma Ajansı\'nın kamuya açık yayınlarından ilham almıştır; tüm gemi adları, anlık emisyon değerleri, terminal kapasiteleri, çalışan profilleri ve uyarı senaryoları tamamen kurgusal ve illustratiftir.',
+    'disclaimer.popup.bullet3':     'Adı geçen tüm marka, şirket ve kurum adları yalnızca konsept gösterimi amacıyla kullanılmıştır; ilgili haklar sahiplerine aittir.',
+    'disclaimer.popup.team':        'Takım: Takım-6',
+    'disclaimer.popup.acknowledge': 'Anladım',
+    'disclaimer.footer.text':       'Konsept Demo · Tüm veriler kurgusaldır · Hackability 9 Mayıs 2026 · İzQ Girişimcilik Merkezi · Takım-6',
+    'disclaimer.badge':             'DEMO',
 
     /* sidebar */
     'sidebar.section.live':      'Canlı',
@@ -265,13 +277,13 @@ const dictionaries = {
 
     /* copilot */
     'copilot.title':             'Operasyon Asistanı',
-    'copilot.subtitle':          'Çevrimiçi · GPT‑5 destekli',
+    'copilot.subtitle':          'Operasyon asistanı · Konsept demo',
     'copilot.online':            'Çevrimiçi',
     'copilot.badge':             'AI v2',
     'copilot.input.placeholder': 'Bir soru sorun veya komut yazın…',
     'copilot.input.aria':        'Mesaj',
     'copilot.send.aria':         'Gönder',
-    'copilot.foot.note':         'Uçtan uca şifreli · v2.4.1',
+    'copilot.foot.note':         'Konsept demo · Tüm veriler kurgusaldır',
     'copilot.welcome':           'Merhaba! İZPORT operasyon asistanınızım. Liman emisyonları, gemi durumu, karadan güç optimizasyonu ve uyumluluk denetimi için canlı verilere bağlıyım. Size nasıl yardımcı olabilirim?',
     'copilot.suggest.summary':   'Son 24s CO₂ anomalilerini özetle',
     'copilot.suggest.threshold': 'NOₓ eşiğini aşan gemiler hangileri?',
@@ -329,7 +341,19 @@ const dictionaries = {
     'brand.name':         'İZPORT',
     'brand.subtitle':     'İzmir Port Operations · Corporate Management Dashboard',
     'brand.tag':          '',
-    'brand.attribution':  'İzmir Metropolitan Municipality',
+    'brand.attribution':  'İzmir Port Concept Demo',
+
+    /* disclaimer (legal / demo indicators) */
+    'disclaimer.popup.title':       'Concept Demo · Hackability 2026',
+    'disclaimer.popup.intro':       'This is a concept demonstration developed in 12 hours on 9 May 2026 as part of the "Hackability — Sustainability, AI, and Coding" competition organized by İzQ Entrepreneurship Center.',
+    'disclaimer.popup.warning':     '⚠️ This is not a real application.',
+    'disclaimer.popup.bullet1':     'This project has no official affiliation, endorsement, or sponsorship from İzmir Metropolitan Municipality, İZPORT Port Operations, İzmir Development Agency, or any of the companies referenced (Petkim, Tüpraş, SOCAR, TCDD, Petrol Ofisi, Total, Alpet, Ege Gaz, Milangaz, Habaş, Ege Gübre, Ege Çelik, IDÇ, ETKİ, Batıliman, Nemport, Ulusoy) or global shipping lines (MSC, Maersk, Evergreen, CMA, COSCO, ONE, HMM, NYK).',
+    'disclaimer.popup.bullet2':     'Some sectoral data is inspired by publicly available publications from the İzmir Development Agency (İZKA); all vessel names, real-time emission values, terminal capacities, operator profiles, and alert scenarios are entirely fictional and illustrative.',
+    'disclaimer.popup.bullet3':     'All trademarks, company names, and institutional references appear solely for concept demonstration purposes; all rights belong to their respective owners.',
+    'disclaimer.popup.team':        'Team: Team-6',
+    'disclaimer.popup.acknowledge': 'I Understand',
+    'disclaimer.footer.text':       'Concept Demo · All data is fictional · Hackability 9 May 2026 · İzQ Entrepreneurship Center · Team-6',
+    'disclaimer.badge':             'DEMO',
 
     'sidebar.section.live':      'Live',
     'sidebar.section.workspace': 'Workspace',
@@ -557,13 +581,13 @@ const dictionaries = {
     'shore.toggle.tooltip_empty': 'No vessel docked',
 
     'copilot.title':             'Operations Copilot',
-    'copilot.subtitle':          'Online · GPT‑5 powered',
+    'copilot.subtitle':          'Operations assistant · Concept demo',
     'copilot.online':            'Online',
     'copilot.badge':             'AI v2',
     'copilot.input.placeholder': 'Ask a question or type a command…',
     'copilot.input.aria':        'Message',
     'copilot.send.aria':         'Send',
-    'copilot.foot.note':         'End-to-end encrypted · v2.4.1',
+    'copilot.foot.note':         'Concept demo · All data is fictional',
     'copilot.welcome':           'Hello! I\'m your İZPORT operations assistant, connected to live data on emissions, vessel status, shore-power optimization, and compliance. How can I help?',
     'copilot.suggest.summary':   'Summarize last 24h CO₂ anomalies',
     'copilot.suggest.threshold': 'Which vessels exceed NOₓ threshold?',
